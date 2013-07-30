@@ -1,0 +1,28 @@
+syntax on
+set number
+set noexpandtab
+set virtualedit=onemore
+set ts=4
+set hlsearch!
+set shiftwidth=4
+set modeline
+
+"indentation macros
+source $VIMRUNTIME/macros/matchit.vim
+filetype indent on
+
+"matlab mlint settings
+autocmd BufEnter *.m compiler mlint
+
+"json syntax highlighting
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
+"ctags
+nnoremap <silent> <F8> :TlistToggle<CR>
+
+"LaTeX
+let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+
+"Sets separators used in keywords
+" nice, but breaks TODO: highlighting
+"set iskeyword=@,48-57,_,-,:,192-255
