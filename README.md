@@ -12,5 +12,5 @@ apt-get install vim subversion git fail2ban sudo
 update-alternatives --config editor
 gpasswd -a <username> sudo
 visudo # add insults ;-)
-git clone git@github.com/kstripp/LinuxRC.git
+git clone https://github.com/kstripp/LinuxRC.git
 </pre>
