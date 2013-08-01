@@ -107,15 +107,16 @@ export SVN_EDITOR=vim
 # PATH updates
 #####################################################################
 
+# local bin
+PATH=$PATH:~/bin
+export PATH
+
 # Run only for local sessions, but not ssh
 #if [ ! -n "$SSH_TTY" ]
 #then
 #
 #	PREFIX=~/local
 #
-#	# local bin
-#	#PATH=$PATH:~/bin
-#	#export PATH
 #	export PATH=$PREFIX/bin:$PATH
 #	export PYTHONPATH=$PREFIX/lib/python2.6/site-packages:$PYTHONPATH
 #	#export GNOME2_PATH=$PREFIX/lib/bonobo/servers:$GNOME2_PATH
