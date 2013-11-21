@@ -8,7 +8,7 @@ Bringing up a server
 -------
 
 <pre>
-apt-get install vim subversion git fail2ban sudo
+apt-get install vim subversion git fail2ban sudo ctags
 update-alternatives --config editor
 gpasswd -a <username> sudo
 visudo # add insults ;-)
