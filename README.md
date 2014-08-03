@@ -7,6 +7,7 @@ This is for bashrc, vimrc, etc to sync between computers.
 Bringing up a server
 -------
 
+Double check that the CD has been commented out in /etc/apt/sources.list
 <pre>
 apt-get install vim subversion git fail2ban sudo ctags
 update-alternatives --config editor
