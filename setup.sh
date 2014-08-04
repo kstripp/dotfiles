@@ -1,32 +1,33 @@
 #!/bin/bash
 
+RCDIR=`pwd`
+
+cd ..
 LOCATION=`pwd`
 
-cd $HOME
-
 # Bash config
-if [ -f $HOME/.bashrc ]
+if [ -f $LOCATION/.bashrc ]
 then
-	rm -r $HOME/.bashrc
+	rm -r $LOCATION/.bashrc
 fi
 echo `ls`
-ln -s $LOCATION/bashrc .bashrc
+ln -s $RCDIR/bashrc .bashrc
 
-if [ -f $HOME/.dir_colors ]
+if [ -f $LOCATION/.dir_colors ]
 then
-	rm -r $HOME/.dir_colors
+	rm -r $LOCATION/.dir_colors
 fi
-ln -s $LOCATION/dir_colors .dir_colors
+ln -s $RCDIR/dir_colors .dir_colors
 
 # Vim profile
-if [ -f $HOME/.vim ]
+if [ -f $LOCATION/.vim ]
 then
-	rm -r $HOME/.vim
+	rm -r $LOCATION/.vim
 fi
-ln -s $LOCATION/vim .vim
+ln -s $RCDIR/vim .vim
 
-if [ -f $HOME/.vimrc ]
+if [ -f $LOCATION/.vimrc ]
 then
-	rm -r $HOME/.vimrc
+	rm -r $LOCATION/.vimrc
 fi
-ln -s $LOCATION/vimrc .vimrc
+ln -s $RCDIR/vimrc .vimrc
