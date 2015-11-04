@@ -16,6 +16,9 @@ Plugin 'VundleVim/Vundle.vim'
 " HTML tag matching
 Plugin 'valloric/MatchTagAlways'
 
+" Jinj2 syntax highlighting
+Plugin 'mitsuhiko/vim-jinja'
+
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
