@@ -115,17 +115,3 @@ export TEXMFHOME=~/.texmf:$TEXMFHOME
 # local bin
 PATH=$PATH:~/bin
 export PATH
-
-# Run only for local sessions, but not ssh
-#if [ ! -n "$SSH_TTY" ]
-#then
-#
-#	PREFIX=~/local
-#
-#	export PATH=$PREFIX/bin:$PATH
-#	export PYTHONPATH=$PREFIX/lib/python2.6/site-packages:$PYTHONPATH
-#	#export GNOME2_PATH=$PREFIX/lib/bonobo/servers:$GNOME2_PATH
-#	#export BONOBO_ACTIVATION_PATH=$PREFIX/lib/bonobo/servers
-#	export LD_LIBRARY_PATH=$PREFIX/lib:$LD_LIBRARY_PATH
-#	export PKG_CONFIG_PATH=$PREFIX/lib/pkgconfig:$PKG_CONFIG_PATH
-#fi
