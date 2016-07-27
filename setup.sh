@@ -25,6 +25,11 @@ then
 	rm -r $LOCATION/.vim
 fi
 ln -s $RCDIR/vim .vim
+cd .vim
+mkdir bundle && cd bundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+cd $LOCATION
 
 if [ -f $LOCATION/.vimrc ]
 then
