@@ -19,6 +19,8 @@ Plugin 'valloric/MatchTagAlways'
 " Jinj2 syntax highlighting
 Plugin 'mitsuhiko/vim-jinja'
 
+Plugin 'vim-airline/vim-airline'
+
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -67,3 +69,6 @@ let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsectio
 " This beauty remembers where you were the last time you edited the file, and returns to the same position.
 " https://dev.launchpad.net/UltimateVimPythonSetup
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
+" vim-airline configuration
+set laststatus=2

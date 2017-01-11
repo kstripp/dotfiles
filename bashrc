@@ -100,6 +100,19 @@ fi
 # END odysseus debian system wide bashrc
 #####################################################################
 
+#####################################################################
+# 256 Terminal Colors
+#####################################################################
+if [ -e /usr/share/terminfo/x/xterm-256color ]; then
+        export TERM='xterm-256color'
+elif [ -e /usr/share/terminfo/x/xterm+256color ]; then
+		# Don't actually *use* xterm+256color...
+		# it breaks things like clear (argh...)
+        export TERM='xterm-256color'
+else
+        export TERM='xterm-color'
+fi
+
 # fix SVN Editor
 export SVN_EDITOR=vim
 
