@@ -9,7 +9,7 @@ Bringing up a server
 
 Double check that the CD has been commented out in /etc/apt/sources.list
 <pre>
-apt-get install vim-nox subversion git fail2ban sudo ctags
+apt-get install aptitude vim-nox subversion git fail2ban sudo ctags
 update-alternatives --config editor
 gpasswd -a <username> sudo
 visudo # add insults ;-)
