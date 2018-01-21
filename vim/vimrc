@@ -21,6 +21,10 @@ Plugin 'mitsuhiko/vim-jinja'
 
 Plugin 'vim-airline/vim-airline'
 
+Plugin 'VIM/vim-kerboscript'
+
+" QML syntax highlighting
+Plugin 'peterhoeg/vim-qml'
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
