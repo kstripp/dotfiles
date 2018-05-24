@@ -1,7 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
-let g:netrw_dirhist_1='/mnt/homeDir/scott/Workbench/multitrack'
-let g:netrw_dirhist_2='/mnt/homeDir/scott/Workbench/multitrack/conf'
-let g:netrw_dirhist_3='/home/ktripp/MXL/scbus/Software/EPS/Equipment/DC-DC Converter'
-let g:netrw_dirhist_4='/home/ktripp/Workbench/multitrack/conf'
-let g:netrw_dirhist_5='/home/ktripp/TestPrograms/python/unittest_roman/__pycache__'
