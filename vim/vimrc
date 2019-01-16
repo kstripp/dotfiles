@@ -1,4 +1,6 @@
-" --- Vundle Config -------------------------------------------------
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Vundle Config
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -30,6 +32,10 @@ Plugin 'peterhoeg/vim-qml'
 " vim-latex
 Plugin 'vim-latex/vim-latex'
 
+" JPL/Caltech headers
+"Plugin 'file:///home/kstripp/Workbench/vim-jpl-headers'
+Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
+
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -45,8 +51,10 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-" --- Misc. Config --------------------------------------------------
-syntax on
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General Configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable
 set number
 set noexpandtab
 set virtualedit=onemore
@@ -55,22 +63,10 @@ set hlsearch!
 set shiftwidth=4
 set modeline
 set nowrap
-
-"indentation macros
-source $VIMRUNTIME/macros/matchit.vim
-filetype indent on
-
-"matlab mlint settings
-"autocmd BufEnter *.m compiler mlint
-
-"json syntax highlighting
-autocmd BufNewFile,BufRead *.json set ft=javascript
+autocmd BufEnter *.m compiler mlint
 
 "ctags
 nnoremap <silent> <F8> :TlistToggle<CR>
-
-"LaTeX
-let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
 
 "Sets separators used in keywords
 " nice, but breaks TODO: highlighting
@@ -80,10 +76,39 @@ let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsectio
 " https://dev.launchpad.net/UltimateVimPythonSetup
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
-" vim-airline configuration
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Filetype specific
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"json syntax highlighting
+autocmd BufNewFile,BufRead *.json set ft=javascript
+
+"indentation macros
+source $VIMRUNTIME/macros/matchit.vim
+filetype indent on
+
+"matlab mlint settings
+"
+"LaTeX
+let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsections'
+
+" JPL ITAR and Copyright header
+"source ${HOME}/.vim/headers/headers.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugin setup
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" vim-airline
 set laststatus=2
 
-" Better Navigation
+" vim-jpl-headers
+let g:vim_jpl_author = "K. Scott Tripp <K.Scott.Tripp@jpl.nasa.gov"
+let g:vim_jpl_doxygen = 0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigation
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
