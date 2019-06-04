@@ -10,7 +10,6 @@ if [ -f $LOCATION/.bashrc ]
 then
 	rm -r $LOCATION/.bashrc
 fi
-echo `ls`
 ln -s $RCDIR/bashrc .bashrc
 
 if [ -f $LOCATION/.dir_colors ]
@@ -36,3 +35,10 @@ then
 	rm -r $LOCATION/.vimrc
 fi
 ln -s $RCDIR/vimrc .vimrc
+
+# Tmux
+if [ -f $LOCATION/.tmux.conf ]
+then
+	rm -r $LOCATION/.tmux.conf
+fi
+ln -s $RCDIR/tmux.conf .tmux.conf
