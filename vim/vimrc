@@ -15,6 +15,9 @@ Plugin 'VundleVim/Vundle.vim'
 
 " --- Vundle Managed Plugins ----------------------------------------
 
+" Solarized
+Plugin 'altercation/vim-colors-solarized'
+
 " HTML tag matching
 Plugin 'valloric/MatchTagAlways'
 
@@ -31,6 +34,9 @@ Plugin 'peterhoeg/vim-qml'
 
 " vim-latex
 Plugin 'vim-latex/vim-latex'
+
+" NERDTree
+Plugin 'scrooloose/nerdtree'
 
 " JPL/Caltech headers
 "Plugin 'file:///home/kstripp/Workbench/vim-jpl-headers'
@@ -105,6 +111,18 @@ set laststatus=2
 " vim-jpl-headers
 let g:vim_jpl_author = "K. Scott Tripp <K.Scott.Tripp@jpl.nasa.gov"
 let g:vim_jpl_doxygen = 0
+
+"NERDTree
+nnoremap <silent> <F6> :NERDTreeToggle<CR>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" tmux doesn't communicate its background to VIM, so we have to tell it
+set background=dark
+
+"FIXME: For some reason this looks terrible
+"colorscheme solarized
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Navigation
