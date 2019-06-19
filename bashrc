@@ -125,3 +125,15 @@ export TEXMFHOME=~/.texmf:$TEXMFHOME
 # local bin
 PATH=$PATH:~/bin
 export PATH
+
+#####################################################################
+# Source any local specific environment scripts
+#####################################################################
+if [ -d $HOME/.profile.d ]; then
+	for i in $HOME/.profile.d/*.sh; do
+		if [ -r $i ]; then
+			. $i
+		fi
+	done
+	unset i
+fi
