@@ -113,19 +113,10 @@ else
         export TERM='xterm-color'
 fi
 
-# fix SVN Editor
-export SVN_EDITOR=vim
-
 #####################################################################
 # LaTeX
 #####################################################################
 export TEXMFHOME=~/.texmf:$TEXMFHOME
-
-#####################################################################
-# Aliases
-#####################################################################
-
-alias t="todo.sh"
 
 #####################################################################
 # PATH updates
@@ -134,3 +125,15 @@ alias t="todo.sh"
 # local bin
 PATH=$PATH:~/bin
 export PATH
+
+#####################################################################
+# Source any local specific environment scripts
+#####################################################################
+if [ -d $HOME/.profile.d ]; then
+	for i in $HOME/.profile.d/*.sh; do
+		if [ -r $i ]; then
+			. $i
+		fi
+	done
+	unset i
+fi
