@@ -38,9 +38,12 @@ Plugin 'vim-latex/vim-latex'
 " NERDTree
 Plugin 'scrooloose/nerdtree'
 
+" Vim ALE
+Plugin 'w0rp/ale'
+
 " JPL/Caltech headers
 "Plugin 'file:///home/kstripp/Workbench/vim-jpl-headers'
-"Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
+Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
 
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
@@ -62,7 +65,7 @@ filetype plugin indent on    " required
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable
 set number
-set noexpandtab
+set expandtab
 set virtualedit=onemore
 set ts=4
 set hlsearch!
