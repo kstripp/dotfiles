@@ -42,8 +42,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'w0rp/ale'
 
 " JPL/Caltech headers
-"Plugin 'file:///home/kstripp/Workbench/vim-jpl-headers'
-Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
+"Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
 
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
