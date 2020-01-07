@@ -41,6 +41,12 @@ Plugin 'scrooloose/nerdtree'
 " Vim ALE
 Plugin 'w0rp/ale'
 
+" Git Gutter
+Plugin 'airblade/vim-gitgutter'
+
+" Vim Fugitive
+Plugin 'tpope/vim-fugitive'
+
 " JPL/Caltech headers
 "Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
 
@@ -116,6 +122,11 @@ let g:vim_jpl_doxygen = 0
 
 "NERDTree
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
+
+" Fugitive
+map <leader>gd   :Gdiff<CR>
+map <leader>gp   :Gpush<CR>
+map <leader>gs   :Gstatus<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
