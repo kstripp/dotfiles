@@ -5,6 +5,13 @@ RCDIR=`pwd`
 cd ..
 LOCATION=`pwd`
 
+# Zsh config
+if [ -f $LOCATION/.zshrc ]
+then
+	rm -r $LOCATION/.zshrc
+fi
+ln -s $RCDIR/zshrc .zshrc
+
 # Bash config
 if [ -f $LOCATION/.bashrc ]
 then
