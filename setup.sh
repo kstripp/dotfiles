@@ -6,6 +6,8 @@ cd ..
 LOCATION=`pwd`
 
 # Zsh config
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
 if [ -f $LOCATION/.zshrc ]
 then
 	rm -r $LOCATION/.zshrc
