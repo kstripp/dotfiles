@@ -119,7 +119,7 @@ set laststatus=2
 
 " vim-jpl-headers
 let g:vim_jpl_author = "K. Scott Tripp <K.Scott.Tripp@jpl.nasa.gov"
-let g:vim_jpl_doxygen = 0
+let g:vim_jpl_doxygen = 1
 
 "NERDTree
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
@@ -128,6 +128,9 @@ nnoremap <silent> <F6> :NERDTreeToggle<CR>
 map <leader>gd   :Gdiff<CR>
 map <leader>gp   :Gpush<CR>
 map <leader>gs   :Gstatus<CR>
+
+" ALE
+let g:ale_python_pylint_executable = 'pylint3'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
