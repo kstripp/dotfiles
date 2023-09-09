@@ -127,7 +127,7 @@ nnoremap <silent> <F6> :NERDTreeToggle<CR>
 " Fugitive
 map <leader>gd   :Gdiff<CR>
 map <leader>gp   :Gpush<CR>
-map <leader>gs   :Gstatus<CR>
+map <leader>gs   :G<CR>
 
 " ALE
 let g:ale_python_pylint_executable = 'pylint3'
