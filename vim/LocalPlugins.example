@@ -1,0 +1,8 @@
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plugins that are specific to a particular environment
+" To use, copy this file to LocalPlugins.vim
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Some Plugin Here
+Plugin 'git@github.company:namespace/repo.git'
+

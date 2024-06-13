@@ -47,8 +47,10 @@ Plugin 'airblade/vim-gitgutter'
 " Vim Fugitive
 Plugin 'tpope/vim-fugitive'
 
-" JPL/Caltech headers
-"Plugin 'git@github.jpl.nasa.gov:kstripp/vim-jpl-headers.git'
+" If a LocalPlugins file exists, load it
+if filereadable("LocalPlugins.vim")
+    :so LocalPlugins.vim
+endif
 
 " --- End Vundle ----------------------------------------------------
 call vundle#end()            " required
@@ -91,6 +93,11 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 " https://dev.launchpad.net/UltimateVimPythonSetup
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+" If a LocalConfig file exists, load it
+if filereadable("LocalConfig.vim")
+    :so LocalConfig.vim
+endif
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Filetype specific
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -116,10 +123,6 @@ let tlist_tex_settings = 'latex;l:labels;s:sections;t:subsections;u:subsubsectio
 
 " vim-airline
 set laststatus=2
-
-" vim-jpl-headers
-let g:vim_jpl_author = "K. Scott Tripp <K.Scott.Tripp@jpl.nasa.gov"
-let g:vim_jpl_doxygen = 1
 
 "NERDTree
 nnoremap <silent> <F6> :NERDTreeToggle<CR>
