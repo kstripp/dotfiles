@@ -1,5 +1,5 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugins that are specific to a particular environment
+" Vundle Plugins that are specific to a particular environment
 " To use, copy this file to LocalPlugins.vim
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
