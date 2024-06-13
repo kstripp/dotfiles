@@ -48,8 +48,8 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'tpope/vim-fugitive'
 
 " If a LocalPlugins file exists, load it
-if filereadable("LocalPlugins.vim")
-    :so LocalPlugins.vim
+if filereadable(expand('$HOME/.vim/LocalPlugins.vim'))
+    so $HOME/.vim/LocalPlugins.vim
 endif
 
 " --- End Vundle ----------------------------------------------------
@@ -94,8 +94,8 @@ nnoremap <silent> <F8> :TlistToggle<CR>
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
 " If a LocalConfig file exists, load it
-if filereadable("LocalConfig.vim")
-    :so LocalConfig.vim
+if filereadable(expand("$HOME/.vim/LocalConfig.vim"))
+    :so $HOME/.vim/LocalConfig.vim
 endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
