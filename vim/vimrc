@@ -133,7 +133,11 @@ map <leader>gp   :Gpush<CR>
 map <leader>gs   :Git<CR>
 
 " ALE
+set completeopt=menu,menuone,preview,noselect,noinsert
 let g:ale_python_pylint_executable = 'pylint3'
+let g:ale_linters = {'systemverilog': ['vlog'], 'python': ['flake8', 'pylint', 'mypy']}
+let g:ale_virtualtext_cursor = 0
+let g:ale_completion_enabled = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance
