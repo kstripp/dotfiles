@@ -13,6 +13,6 @@ apt-get install aptitude vim-nox git fail2ban sudo ctags
 update-alternatives --config editor
 gpasswd -a <username> sudo
 visudo # add insults ;-)
-git clone https://github.com/kstripp/LinuxRC.git ~/.homerc
+git clone https://github.com/kstripp/dotfiles.git ~/.dotfiles
 cd ~/.homerc && ./setup.sh
 </pre>
